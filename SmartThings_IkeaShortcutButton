@@ -354,12 +354,12 @@ private Map getButtonEvent(Map descMap) {
 	if (isIkeaShortcutButton()) {
 		//log.debug("descMap.commandInt = $descMap.commandInt, descMap.clusterInt = $descMap.clusterInt")
 		if (descMap.commandInt == 0x01 && descMap.clusterInt == 0x06) {
-	        buttonNumber = SHORTCUTBUTTON_BUTTONS.BUTTON
+	        	buttonNumber = SHORTCUTBUTTON_BUTTONS.BUTTON
 			buttonState = "pushed"
 		} else if (descMap.commandInt == 0x05 && descMap.clusterInt == 0x08) {
-	        buttonNumber = SHORTCUTBUTTON_BUTTONS.BUTTON
-        	buttonState = "held"
-        }
+	        	buttonNumber = SHORTCUTBUTTON_BUTTONS.BUTTON
+        		buttonState = "held"
+        	}
 	} else if (isIkeaRemoteControl()) {
 		Map event = ikeaRemoteControlMapping[descMap.clusterInt][descMap.commandInt](descMap.data[0])
 		buttonState = event.state
