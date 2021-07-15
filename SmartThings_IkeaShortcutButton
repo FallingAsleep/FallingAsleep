@@ -18,7 +18,7 @@ import groovy.json.JsonOutput
 import physicalgraph.zigbee.zcl.DataType
 
 metadata {
-	definition (name: "Local Ikea Button", namespace: "smartthings", author: "SmartThings", ocfDeviceType: "x.com.st.d.remotecontroller", mcdSync: true) {
+	definition (name: "Ikea Shortcut Button", namespace: "smartthings", author: "SmartThings", ocfDeviceType: "x.com.st.d.button", mcdSync: true) {
 		capability "Actuator"
 		capability "Battery"
 		capability "Button"
